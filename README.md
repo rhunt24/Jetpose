@@ -1,6 +1,7 @@
 # Jetpose
 
-**Unofficial implementation of the FoundationPose library for Jetson Orin NX with live inference using Realsense D435i.**
+**Implementation of the FoundationPose library for Jetson Orin NX with live inference using Realsense D435i.**
+### On local conda environment.
 
 ## Install Dependencies
 
