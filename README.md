@@ -13,7 +13,7 @@ Follow the commented instructions in `build_all.sh` step by step. **Do not run t
 2. To enable `pyrealsense2` support, copy the required `.so` files to the folder where the script will run in the Jetpose directory. Example:
 
 ```bash
-cp ~/librealsense_build/librealsense-master/build/releasepyrealsense2.cpython-310-aarch64-linux-gnu.so.2.55.1 ~/Jetpose/FoundationPose/pyrealsense2.so
+cp ~/librealsense_build/librealsense-master/build/release/pyrealsense2.cpython-310-aarch64-linux-gnu.so.2.55.1 ~/Jetpose/FoundationPose/pyrealsense2.so
 cp ~/librealsense_build/librealsense-master/build/release/librealsense2.so.2.55.1 ~/Jetpose/FoundationPose/librealsense2.so
 cp ~/librealsense_build/librealsense-master/build/release/librealsense2-gl.so.2.55.1 ~/Jetpose/FoundationPose/librealsense2-gl.so
 ```
