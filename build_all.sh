@@ -20,10 +20,10 @@ if [ ! -d "$HOME/miniconda3" ]; then
 fi
 
 # Create conda environment
-if [ ! -d "$HOME/miniconda3/envs/foundationpose_ros" ]; then
-    conda create -n foundationpose_ros python=3.10
+if [ ! -d "$HOME/miniconda3/envs/jetpose" ]; then
+    conda create -n jetpose python=3.10
 fi
-conda activate foundationpose_ros
+conda activate jetpose
 
 ## gcc and g++ version 11
 sudo apt-get update && sudo apt-get install -y gcc-11 g++-11
@@ -56,8 +56,8 @@ gdown --folder https://drive.google.com/drive/folders/12Te_3TELLes5cim1d7F7EBTwU
 # Install pybind11
 cd ${PROJ_ROOT}/FoundationPose && git clone https://github.com/pybind/pybind11 && \
     cd pybind11 && git checkout v2.10.0 && \
-    mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release -DPYBIND11_INSTALL=ON -DPYBIND11_TEST=OFF && \
-    make -j6 && make install
+    mkdir build && cd build && sudo cmake .. -DCMAKE_BUILD_TYPE=Release -DPYBIND11_INSTALL=ON -DPYBIND11_TEST=OFF && \
+    sudo make -j6 && sudo make install
 
 # Install Eigen
 cd ${PROJ_ROOT}/FoundationPose && wget https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.tar.gz && \
@@ -65,8 +65,8 @@ cd ${PROJ_ROOT}/FoundationPose && wget https://gitlab.com/libeigen/eigen/-/archi
     cd eigen-3.4.0 && \
     mkdir build && \
     cd build && \
-    cmake .. && \
-    make install
+    sudo cmake .. && \
+    sudo make install
 
 # Clone and install nvdiffrast
 cd ${PROJ_ROOT}/FoundationPose && git clone https://github.com/NVlabs/nvdiffrast && \
@@ -74,9 +74,9 @@ cd ${PROJ_ROOT}/FoundationPose && git clone https://github.com/NVlabs/nvdiffrast
 
 # Install mycpp
 cd ${PROJ_ROOT}/FoundationPose/mycpp/ && \
-rm -rf build && mkdir -p build && cd build && \
-cmake .. && \
-make -j$(nproc)
+sudo rm -rf build && mkdir -p build && cd build && \
+sudo cmake .. && \
+sudo make -j$(nproc)
 
 # Install mycuda (not needed for inference)
 # cd ${PROJ_ROOT}/FoundationPose/bundlesdf/mycuda && \

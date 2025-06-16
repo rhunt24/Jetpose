@@ -36,7 +36,7 @@ python run_live.py
 - During development, I couldn't use the cuDNN backend in PyTorch. As a workaround, I disabled it using:
 
 ```python
-torch.backends.cudnn.enabled = False
+# torch.backends.cudnn.enabled = False
 ```
 
 This results in slow inference, approximately **1 inference per second**.

@@ -44,7 +44,7 @@ def create_mask():
         cv2.namedWindow("Image")
         cv2.setMouseCallback("Image", select_points)
 
-        print("Click on the image to select points. Press Enter when done.")
+        print("Click on the image to select points. Press Enter in the window when done.")
 
         while True:
             cv2.imshow("Image", image_display)

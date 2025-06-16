@@ -1,4 +1,4 @@
-name: foundationpose_ros
+name: jetpose
 channels:
   - conda-forge
   - defaults
@@ -183,4 +183,4 @@ dependencies:
       - yarl==1.18.3
       - zeroconf==0.143.0
       - zipp==3.21.0
-prefix: /home/sastra/miniconda3/envs/foundationpose_ros
+prefix: /home/mikrolar_orin/miniconda3/envs/jetpose
